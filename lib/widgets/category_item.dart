@@ -21,8 +21,7 @@ class _CategoryItemState extends State<CategoryItem> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20.sp),
             child: Image.asset(
-              "assets/images/empty_state.png",
-              //widget.category.image,
+              widget.category.image,
               fit: BoxFit.cover,
             ),
           ),

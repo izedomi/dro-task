@@ -13,6 +13,7 @@ import 'package:dro/widgets/app_bar.dart/shared_appbar.dart';
 import 'package:dro/widgets/buttons/custom_outline_button.dart';
 import 'package:dro/widgets/buttons/custom_solid_button.dart';
 import 'package:dro/widgets/empty_state.dart';
+import 'package:dro/widgets/product_sub_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
@@ -98,9 +99,13 @@ class _CartScreenState extends State<CartScreen> {
                                                       fontSize: 16.sp,
                                                       color: bunkerBlack),
                                                   VSpace(4.h),
-                                                  Styles.regular(
-                                                      "${cart.product.type}-${cart.product.packSize}",
-                                                      color: clayBlack),
+                                                  ProductSubDetail(
+                                                      label1: cart.product.type,
+                                                      label2: cart
+                                                          .product.packSize),
+                                                  // Styles.regular(
+                                                  //     "${cart.product.type}-${cart.product.packSize}",
+                                                  //     color: clayBlack),
                                                   VSpace(9.h),
                                                   Styles.regular(
                                                       "₦" +
